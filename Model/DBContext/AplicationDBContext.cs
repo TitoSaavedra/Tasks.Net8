@@ -4,12 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Model.Entities;
 
 namespace Model.DBContext
 {
-    public class AplicationDBContext : DbContext
+    public class AplicationDBContext : IdentityDbContext
     {
         public AplicationDBContext(DbContextOptions options)
             : base(options) { }
